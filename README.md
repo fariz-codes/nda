@@ -26,17 +26,17 @@ npm i nda -g
 
 **NDA** helps you to deploy your NodeJS projects in an easier way. Once you configure your project with NDA, then you are only one click away from starting or restarting it.
 
-Once a project is started using NDA, it will collects the project's logs & also monitors the CPU usage & status of the project.
+- Once a project is started using NDA, it will collects the project's logs & also monitors the CPU usage & status of the project.
 
-Since the projects will be started in a **keep alive** mode, closing the browser window or the terminal (from where the NDA is launched) won't stop your NodeJs projects started by NDA.
+- Since the projects will be started in a **keep alive** mode, closing the browser window or the terminal (from where the NDA is launched) won't stop your NodeJs projects started by NDA.
 
 [**Note**] If the machine is restarted or NDA is stopped, it will stop all the projects started by the NDA.
 
 ## How it works
 
-When you start **NDA**, it will launch a web application in the machine where it's installed.
+- When you start **NDA**, it will launch a web application in the machine where it's installed.
 
-From the launched web app, you can handle the deployment of your NodeJS projects.
+- From the launched web app, you can handle the deployment of your NodeJS projects.
 
 ## Feature: Dashboard
 
