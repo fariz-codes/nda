@@ -1,0 +1,1 @@
+CreateObject("Wscript.Shell").Run "node E:\nda\bin\server.js", 0

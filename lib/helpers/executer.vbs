@@ -1,1 +1,0 @@
-CreateObject("WScript.Shell").Run "taskkill /F /PID 20672", 0

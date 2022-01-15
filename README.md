@@ -4,8 +4,6 @@
 [![npm Downloads](https://img.shields.io/npm/dm/nda.svg?style=flat-square)](https://www.npmjs.com/package/nda)
 [![npm Downloads](https://img.shields.io/npm/dy/nda.svg?style=flat-square)](https://www.npmjs.com/package/nda)
 
-<a href="//www.dmca.com/Protection/Status.aspx?ID=eb641eb2-d944-4f08-806d-778e5288c0e3" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca_protected_25_120.png?ID=eb641eb2-d944-4f08-806d-778e5288c0e3"  alt="DMCA.com Protection Status" /></a>
-
 ## Installation
 
 Install **NDA** as a global package.
@@ -111,6 +109,11 @@ nda status
 
 ## License
 
-NDA is licensed under **AGPL-3.0**
+<a href="//www.dmca.com/Protection/Status.aspx?ID=eb641eb2-d944-4f08-806d-778e5288c0e3" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca_protected_25_120.png?ID=eb641eb2-d944-4f08-806d-778e5288c0e3"  alt="DMCA.com Protection Status" /></a>
+```
+<script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+```
+
+NDA is licensed under **GNU AGPL-3.0**
 
 For any queries or support, **reach us** at (mailto:nda.founder@gmail.com)

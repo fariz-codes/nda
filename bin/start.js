@@ -9,8 +9,8 @@ const CONFIG_PATH = projectConfig.CHILD_PROCESS_BASE_CONFIG_PATH;
 
 const port = process.env.port;
 const appURL = `http://localhost:${port}`;
-const startScriptPath = path.resolve(__dirname.split('bin')[0], 'lib/helpers/start-script.vbs');
-const vbsPath = path.resolve(__dirname.split('bin')[0], 'lib/helpers/executer.vbs');
+const startScriptPath = path.resolve(__dirname.split('bin')[0], 'lib/temp/start-script.vbs');
+const vbsPath = path.resolve(__dirname.split('bin')[0], 'lib/temp/executer.vbs');
 
 utils.isPortInUse(port, async function (data) {
   if (data && data.inUse) {

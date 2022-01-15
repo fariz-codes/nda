@@ -8,7 +8,6 @@
 const express = require('express');
 const path = require('path');
 const http = require('http');
-const { _redirect } = require('../lib/models/redirector');
 const { writeLog } = require('../lib/helpers/log-writer');
 const fs = require('fs');
 const projectConfig = require('../config/project-configs');
