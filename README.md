@@ -82,7 +82,7 @@ NDA stores the logs of running projects in a daily basis. To see all the logs av
 
 - To fetch logs after a certain line, provide the line count in the **text box** near the **Fetch** button & then click on Fetch.
 
-## NDA CLI Commands
+## CLI Commands
 
 - To start NDA in 8055 (NDA's default port)
 

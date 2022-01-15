@@ -1,3 +1,10 @@
+'use strict';
+
+/**
+ * NDA is protected by DMCA (2022).
+ * It's source code is licensed under GNU AGPL 3.0
+ */
+
 const express = require('express');
 const path = require('path');
 const http = require('http');
