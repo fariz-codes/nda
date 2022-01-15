@@ -1,1 +1,0 @@
-CreateObject("WScript.Shell").Run "http://localhost:8055"
