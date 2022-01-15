@@ -58,29 +58,29 @@ It has the functionality to,
 
 To start deploying your NodeJS projects, goto to the Add Project page by clicking on the (+) button in the dashboard.
 
-In the Add Project page, provide your project's - name, folder path, start file path, port, environment variables & cron jobs.
+- In the Add Project page, provide your project's - name, folder path, start file path, port, environment variables & cron jobs.
 
-Please check the information provided in the **info** icon against each inputs in the Add Project page to configure your project without successfully.
+- Please check the information provided in the **info** icon against each inputs in the Add Project page to configure your project without successfully.
 
 ## Feature: Logs
 
 NDA stores the logs of running projects in a daily basis. To see all the logs available for a project, click the **Logs** icon under the **Actions** column against the corresponding project in the dashboard. It will navigate you to the logs list page.
 
-The **logs list page** displays the list of logs created on a daily basis.
+- The **logs list page** displays the list of logs created on a daily basis.
 
-It provides the log information like log date, file size & updated time.
+- It provides the log information like log date, file size & updated time.
 
-It also provides the options to delete & view the logs of a particular day.
+- It also provides the options to delete & view the logs of a particular day.
 
-To view the logs, click on the **Logs** icon against the log file. It will navigate you to the logs page.
+- To view the logs, click on the **Logs** icon against the log file. It will navigate you to the logs page.
 
-**Logs page** displays the log contents based on the date.
+- **Logs page** displays the log contents based on the date.
 
-To avoid overload, logs page is implemented with pagination & lazy load. 
+- To avoid overload, logs page is implemented with pagination & lazy load. 
 
-It displays the logs based on the line count selected in the **dropdown** at the top-right and it will fetch the next set of records when **scrolled**.
+- It displays the logs based on the line count selected in the **dropdown** at the top-right and it will fetch the next set of records when **scrolled**.
 
-To fetch logs after a certain line, provide the line count in the **text box** near the **Fetch** button & then click on Fetch.
+- To fetch logs after a certain line, provide the line count in the **text box** near the **Fetch** button & then click on Fetch.
 
 ## NDA CLI Commands
 
