@@ -1,0 +1,73 @@
+{
+  "name": "node-deployment-assistant",
+  "version": "0.1.0",
+  "description": "An application to deploy NodeJS projects from an internet browser",
+  "main": "./bin/index.js",
+  "bin": {
+    "nda": "./bin/index.js"
+  },
+  "preferGlobal": true,
+  "deprecated": false,
+  "author": {
+    "name": "Mohammed Fariz",
+    "email": "mohmd.fariz@gmail.com",
+    "url": "https://www.linkedin.com/in/mohammed-fariz"
+  },
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "line-reader": "^0.4.0",
+    "pidusage": "^3.0.0"
+  },
+  "keywords": [
+    "application",
+    "browser",
+    "cli",
+    "cron",
+    "deploy",
+    "deployment",
+    "devops",
+    "express",
+    "forever",
+    "forever-monitor",
+    "handler",
+    "keep alive",
+    "keep process alive",
+    "linux",
+    "logging",
+    "log management",
+    "logs",
+    "monitoring",
+    "nodemon",
+    "process handler",
+    "process logs",
+    "process logging",
+    "process manager",
+    "process run",
+    "project",
+    "project deployment",
+    "run",
+    "Windows"
+  ],
+  "maintainers": [
+    {
+      "name": "Mohammed Fariz",
+      "email": "mohmd.fariz@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fariz-codes/nda"
+  },
+  "engines": {
+    "node": ">=4.3.2"
+  },
+  "files": [
+    "LICENSE",
+    "CHANGELOG.md",
+    "README.md",
+    "bin/*",
+    "lib/*"
+  ]
+}
