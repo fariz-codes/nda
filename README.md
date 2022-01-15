@@ -107,12 +107,14 @@ nda sleep
 nda status
 ```
 
-## License
+## Copyright
 
 <a href="//www.dmca.com/Protection/Status.aspx?ID=eb641eb2-d944-4f08-806d-778e5288c0e3" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca_protected_25_120.png?ID=eb641eb2-d944-4f08-806d-778e5288c0e3"  alt="DMCA.com Protection Status" /></a>
 ```
 <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
 ```
+
+## License
 
 NDA is licensed under **GNU AGPL-3.0**
 
