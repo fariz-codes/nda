@@ -1,2 +1,4 @@
 node_modules
 package-lock.json
+lib/temp/start-script.vbs
+lib/temp/executer.vbs

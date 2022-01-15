@@ -1,1 +1,1 @@
-CreateObject("WScript.Shell").Run "taskkill /F /PID 3736", 0
+CreateObject("WScript.Shell").Run "http://localhost:8055"
