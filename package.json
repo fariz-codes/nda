@@ -1,5 +1,5 @@
 {
-  "name": "node-deployment-assistant",
+  "name": "nda",
   "version": "0.1.0",
   "description": "An application to deploy NodeJS projects from an internet browser",
   "main": "./bin/index.js",
