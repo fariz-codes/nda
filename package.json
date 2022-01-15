@@ -1,6 +1,6 @@
 {
-  "name": "nda",
-  "version": "0.1.0",
+  "name": "nda-installer",
+  "version": "0.1.1",
   "description": "An application to deploy NodeJS projects from an internet browser",
   "main": "./bin/index.js",
   "bin": {
@@ -68,6 +68,7 @@
     "CHANGELOG.md",
     "README.md",
     "bin/*",
-    "lib/*"
+    "lib/*",
+    "config/*"
   ]
 }

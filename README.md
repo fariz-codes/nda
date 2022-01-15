@@ -1,15 +1,15 @@
 # Node Deployment Assistant @ NDA
 **Now deploy node projects from an internet browser**
 
-[![npm Downloads](https://img.shields.io/npm/dm/nda.svg?style=flat-square)](https://www.npmjs.com/package/nda)
-[![npm Downloads](https://img.shields.io/npm/dy/nda.svg?style=flat-square)](https://www.npmjs.com/package/nda)
+<!-- [![npm Downloads](https://img.shields.io/npm/dm/nda-installer.svg?style=flat-square)](https://www.npmjs.com/package/nda-installer)
+[![npm Downloads](https://img.shields.io/npm/dy/nda-installer.svg?style=flat-square)](https://www.npmjs.com/package/nda-installer) -->
 
 ## Installation
 
 Install **NDA** as a global package.
 
 ```
-npm i nda -g
+npm i nda-installer -g
 ```
 
 ## Prerequisite
