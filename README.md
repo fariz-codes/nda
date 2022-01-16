@@ -1,8 +1,8 @@
 # Node Deployment Assistant @ NDA
 **Now deploy node projects from an internet browser**
 
-<!-- [![npm Downloads](https://img.shields.io/npm/dm/nda-installer.svg?style=flat-square)](https://www.npmjs.com/package/nda-installer)
-[![npm Downloads](https://img.shields.io/npm/dy/nda-installer.svg?style=flat-square)](https://www.npmjs.com/package/nda-installer) -->
+[![npm Downloads](https://img.shields.io/npm/dm/nda-installer.svg?style=flat-square)](https://www.npmjs.com/package/nda-installer)
+[![npm Downloads](https://img.shields.io/npm/dy/nda-installer.svg?style=flat-square)](https://www.npmjs.com/package/nda-installer)
 
 ## Installation
 
@@ -21,6 +21,8 @@ npm i nda-installer -g
 - As NDA uses ES6 scripts, it is required that your machine should be installed with **NodeJS** version greater than or equal to **4.3.2**.
 
 ## About
+
+<img src="https://github.com/fariz-codes/npm-images/blob/master/nda/dashboard.png?raw=true">
 
 **NDA** helps you to deploy your NodeJS projects in an easier way. Once you configure your project with NDA, then you are only one click away from starting or restarting it.
 
@@ -110,9 +112,6 @@ nda status
 ## Copyright
 
 <a href="//www.dmca.com/Protection/Status.aspx?ID=eb641eb2-d944-4f08-806d-778e5288c0e3" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca_protected_25_120.png?ID=eb641eb2-d944-4f08-806d-778e5288c0e3"  alt="DMCA.com Protection Status" /></a>
-```
-<script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
-```
 
 ## License
 
