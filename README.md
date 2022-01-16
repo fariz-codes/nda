@@ -78,7 +78,7 @@ NDA stores the logs of running projects in a daily basis. To see all the logs av
 
 - To avoid overload, logs page is implemented with pagination & lazy load. 
 
-- It displays the logs based on the line count selected in the **dropdown** at the top-right and it will fetch the next set of records when **scrolled**.
+- It displays the logs based on the line count selected in the **dropdown** near the **Fetch** button and it will fetch the next set of records when **scrolled**.
 
 - To fetch logs after a certain line, provide the line count in the **text box** near the **Fetch** button & then click on Fetch.
 
@@ -108,6 +108,10 @@ nda sleep
 ```
 nda status
 ```
+
+## CHANGELOG
+
+[See Change Logs](https://github.com/fariz-codes/nda/blob/main/CHANGELOG.md)
 
 ## Copyright
 
