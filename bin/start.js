@@ -6,11 +6,18 @@ const fs = require('fs');
 const projectConfig = require('../config/project-configs');
 const utils = require('../lib/helpers/utilities');
 const CONFIG_PATH = projectConfig.CHILD_PROCESS_BASE_CONFIG_PATH;
+const { _restartRunningPids } = require('../lib/models/process');
 
 const port = process.env.port;
 const appURL = `http://localhost:${port}`;
 const startScriptPath = path.resolve(CONFIG_PATH, 'start-script.vbs');
 const vbsPath = path.resolve(CONFIG_PATH, 'executer.vbs');
+
+const sendCLIResponse = () => {
+  fs.writeFileSync(vbsPath, `CreateObject("WScript.Shell").Run "${appURL}"`);
+  console.log(`Open ${appURL} in your browser to explore nda.`);
+  exec(vbsPath, {});
+};
 
 utils.isPortInUse(port, async function (data) {
   if (data && data.inUse) {
@@ -28,12 +35,18 @@ utils.isPortInUse(port, async function (data) {
       exec(startScriptPath, {}, function (err) {
         if (!err) {
           let startInterval = setInterval(function () {
-            utils.isPortInUse(port, function (data) {
+            utils.isPortInUse(port, (data) => {
               if (data && data.inUse) {
                 clearInterval(startInterval);
-                fs.writeFileSync(vbsPath, `CreateObject("WScript.Shell").Run "${appURL}"`);
-                console.log(`Open ${appURL} in your browser to explore nda.`);
-                exec(vbsPath, {});
+                let runningPids = fs.existsSync(path.resolve(CONFIG_PATH, 'runningPids.txt')) ? fs.readFileSync(path.resolve(CONFIG_PATH, 'runningPids.txt')).toString() : null;
+                runningPids = runningPids ? runningPids.split(',') : [];
+                if (runningPids && runningPids.length > 0) {
+                  _restartRunningPids(runningPids, () => {
+                    sendCLIResponse();
+                  });
+                } else {
+                  sendCLIResponse();
+                }
               }
             });
           }, 2000);

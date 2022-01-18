@@ -82,7 +82,7 @@ NDA stores the logs of running projects in a daily basis. To see all the logs av
 
 - To fetch logs after a certain line, provide the line count in the **text box** near the **Fetch** button & then click on Fetch.
 
-## CLI Commands
+## Available CLI Commands
 
 - To start NDA in 8055 (NDA's default port)
 
@@ -107,6 +107,26 @@ nda sleep
 
 ```
 nda status
+```
+
+- To restart NDA & all the services started by it
+
+```
+nda refresh
+```
+
+## Upgrading
+
+- To install the latest version
+
+```
+npm i nda-installer -g
+```
+
+- To apply the latest changes
+
+```
+nda refresh
 ```
 
 ## CHANGELOG
