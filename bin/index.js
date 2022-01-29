@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
-const commands = ['run', 'sleep', 'status'];
+const commands = ['run', 'sleep', 'status', 'respawn'];
 const optionsLength = {
   run: 4,
   sleep: 3,
-  status: 3
+  status: 3,
+  respawn: 3
 };
 const optionType = {
   run: 'number'
@@ -47,7 +48,8 @@ if (isValidCommand() && isValidOption()) {
   console.log('nda run          starts nda in default port 8055\n');
   console.log('nda run port     starts nda in mentioned port\n');
   console.log('nda sleep        stops nda & all the services started by it\n');
-  console.log('nda status       provides the current running status of nda\n\n');
+  console.log('nda status       provides the current running status of nda\n');
+  console.log('nda respawn      restarts the nda & all the services started by it. It must be used after installing a new version of nda to apply the changes in it.\n\n');
   console.log('Examples: \n');
   console.log('nda run 7000     starts nda in 7000 port');
 }
