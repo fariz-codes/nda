@@ -112,10 +112,10 @@ nda status
 - To restart NDA & all the services started by it
 
 ```
-nda refresh
+nda respawn
 ```
 
-## Upgrading
+## Receiving Updates
 
 - To install the latest version
 
@@ -126,7 +126,7 @@ npm i nda-installer -g
 - To apply the latest changes
 
 ```
-nda refresh
+nda respawn
 ```
 
 ## CHANGELOG
