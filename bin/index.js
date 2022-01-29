@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+const packageJson = require('./../package.json');
 const commands = ['run', 'sleep', 'status', 'respawn'];
 const optionsLength = {
   run: 4,
@@ -40,7 +41,9 @@ const isValidOption = () => {
   }
 };
 
-console.log('                 Node Deployment Assistant\n');
+console.log('                          ---------------------------------- ');
+console.log(`                         | Node Deployment Assistant v${packageJson.version} |`);
+console.log('                          ---------------------------------- ');
 if (isValidCommand() && isValidOption()) {
   require('../lib/helpers/process-command');
 } else {
