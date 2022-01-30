@@ -1,3 +1,7 @@
+## 0.2.1
+
+- Fix for project start issue in Ubuntu OS (Modify port availability checking function to work based on OS type & version)
+
 ## 0.2.0
 
 - Fix issues in project starting for linux OS
