@@ -141,4 +141,4 @@ nda respawn
 
 NDA is licensed under **GNU AGPL-3.0**
 
-For any queries or support, **reach us** at (mailto:nda.founder@gmail.com)
+For any queries or support, **reach us** at (mailto:nda.author@gmail.com)
