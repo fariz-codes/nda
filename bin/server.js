@@ -55,8 +55,8 @@ server.listen(port, () => {
   if (!process.env.PORT) {
     process.env.PORT = port;
   }
-  fs.writeFileSync(path.resolve(CONFIG_PATH, 'pid.txt'), process.pid)
-  fs.writeFileSync(path.resolve(CONFIG_PATH, 'port.txt'), port)
+  fs.writeFileSync(path.resolve(CONFIG_PATH, 'pid.txt'), process.pid.toString())
+  fs.writeFileSync(path.resolve(CONFIG_PATH, 'port.txt'), port.toString())
 });
 
 module.exports = { app };
