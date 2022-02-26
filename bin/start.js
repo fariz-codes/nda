@@ -36,7 +36,7 @@ utils.isPortInUse(port, async function (data) {
         if (!err) {
           let startInterval = setInterval(function () {
             utils.isPortInUse(port, (data) => {
-              if (data && data.inUse) {
+              if (data && (data.inUse || data.ignore)) {
                 clearInterval(startInterval);
                 let runningPids = fs.existsSync(path.resolve(CONFIG_PATH, 'runningPids.txt')) ? fs.readFileSync(path.resolve(CONFIG_PATH, 'runningPids.txt')).toString() : null;
                 runningPids = runningPids ? runningPids.split(',') : [];

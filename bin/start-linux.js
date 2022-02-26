@@ -21,7 +21,7 @@ const sendCLIResponse = () => {
   spawn(openCmd, [appURL], {});
 };
 
-utils.isPortInUse(port, async function (data) {
+utils.isPortInUse(port, (data) => {
   if (data && data.inUse) {
     console.log(`Failed to start nda on port ${port}. An application is already running on that port.`);
   } else {
@@ -33,26 +33,27 @@ utils.isPortInUse(port, async function (data) {
       console.log(`nda is already running on port - ${previousPort}. Open http://localhost:${previousPort} in your browser to explore nda.`);
     } else {
       let serverPath = path.resolve(__dirname, 'server.js');
-      const ls = spawn(`node`, [serverPath], { detached: true, env: { PORT: port } });
-
-      let startInterval = setInterval(function () {
-        utils.isPortInUse(port, (data) => {
-          if (data && data.inUse) {
-            clearInterval(startInterval);
-            let runningPids = fs.existsSync(path.resolve(CONFIG_PATH, 'runningPids.txt')) ? fs.readFileSync(path.resolve(CONFIG_PATH, 'runningPids.txt')).toString() : null;
-            runningPids = runningPids ? runningPids.split(',') : [];
-            if (runningPids && runningPids.length > 0) {
-              _restartRunningPids(runningPids, () => {
+       const spawnResponse = spawn(process.execPath, [serverPath], { detached: true, env: { PORT: port } });
+        let startInterval = setInterval(function () {
+          utils.isPortInUse(port, (data) => {
+            if (data && (data.inUse || data.ignore)) {
+              clearInterval(startInterval);
+              let runningPids = fs.existsSync(path.resolve(CONFIG_PATH, 'runningPids.txt')) ? fs.readFileSync(path.resolve(CONFIG_PATH, 'runningPids.txt')).toString() : null;
+              runningPids = runningPids ? runningPids.split(',') : [];
+              if (runningPids && runningPids.length > 0) {
+                _restartRunningPids(runningPids, () => {
+                  sendCLIResponse();
+                });
+              } else {
                 sendCLIResponse();
-              });
-            } else {
-              sendCLIResponse();
+              }
             }
-          } else {
-            console.log(`Failed to start Deployment Assistant. Please try again.`);
-          }
-        });
-      }, 2000);
+          });
+        }, 2000);
+      
+      spawnResponse.on('error', (data) => {
+        console.log(`Failed to start nda on port ${port}. Please ensure the port that you are trying is not in use & run again.`);
+      });
     }
   }
 });
