@@ -1,3 +1,9 @@
+## 0.2.3
+
+- Bugfixes based on Mac OS
+- Bugfix in dashboard page
+- Use npm packages to check port availability & process kill
+
 ## 0.2.1
 
 - Fix for project start issue in Ubuntu OS (Modify port availability checking function to work based on OS type & version)

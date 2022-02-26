@@ -12,6 +12,10 @@ Install **NDA** as a global package.
 npm i nda-installer -g
 ```
 
+## Tested platforms
+
+- Windows, Linux, Mac
+
 ## Prerequisite
 
 - As NDA is a browser application, an internet browser is required to be installed in your machine. 
