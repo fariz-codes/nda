@@ -12,7 +12,7 @@ Install **NDA** as a global package.
 npm i nda-installer -g
 ```
 
-## Tested platforms
+## Supported platforms
 
 - Windows, Linux, Mac
 
@@ -20,7 +20,7 @@ npm i nda-installer -g
 
 - As NDA is a browser application, an internet browser is required to be installed in your machine. 
 
-[**Note**] If you are using a linux-OS based machine and you cant install a browser in it, then you can run NDA in your machine on some port & do Port Tunneling (Port Forwarding) to other remote machine where you can access the NDA app in browser.
+**Note** If you are using a linux-OS based machine and you cant install a browser in it, then you can run NDA in your machine on some port & do Port Tunneling (Port Forwarding) to other remote machine where you can access the NDA app in browser.
 
 - As NDA uses ES6 scripts, it is required that your machine should be installed with **NodeJS** version greater than or equal to **4.3.2**.
 
@@ -34,13 +34,15 @@ npm i nda-installer -g
 
 - Since the projects will be started in a **keep alive** mode, closing the browser window or the terminal (from where the NDA is launched) won't stop your NodeJs projects started by NDA.
 
-[**Note**] If the machine is restarted or NDA is stopped, it will stop all the projects started by the NDA.
+**Note** If the machine is restarted or NDA is stopped, it will stop all the projects started by the NDA.
 
 ## How it works
 
 - When you start **NDA**, it will launch a web application in the machine where it's installed.
 
 - From the launched web app, you can handle the deployment of your NodeJS projects.
+
+Please click [here](https://youtu.be/JdaDegOhaG0) for a detailed explanation video.
 
 ## Feature: Dashboard
 

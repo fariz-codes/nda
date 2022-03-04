@@ -52,7 +52,7 @@ if (isValidCommand() && isValidOption()) {
   console.log('nda run port     starts nda in mentioned port\n');
   console.log('nda sleep        stops nda & all the services started by it\n');
   console.log('nda status       provides the current running status of nda\n');
-  console.log('nda respawn      restarts the nda & all the services started by it. It must be used after installing a new version of nda to apply the changes in it.\n\n');
+  console.log('nda respawn      restarts the nda & all the services started by it. If nda is already running in your machine, then this command must be used after installing a new version of nda to apply the changes in it.\n\n');
   console.log('Examples: \n');
   console.log('nda run 7000     starts nda in 7000 port');
 }
