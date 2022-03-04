@@ -42,6 +42,8 @@ npm i nda-installer -g
 
 - From the launched web app, you can handle the deployment of your NodeJS projects.
 
+## Detailed explanation
+
 Please click [here](https://youtu.be/JdaDegOhaG0) for a detailed explanation video.
 
 ## Feature: Dashboard
