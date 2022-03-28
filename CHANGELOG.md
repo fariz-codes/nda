@@ -1,3 +1,8 @@
+## 0.2.7
+
+- Do code clean
+- Update package json file
+
 ## 0.2.4
 
 - Changes in Readme file
