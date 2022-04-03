@@ -2,9 +2,9 @@
   "name": "nda-installer",
   "version": "0.2.6",
   "description": "An application to deploy NodeJS projects from an internet browser",
-  "main": "./bin/index.js",
+  "main": "index.js",
   "bin": {
-    "nda": "./bin/index.js"
+    "nda": "index.js"
   },
   "preferGlobal": true,
   "deprecated": false,
@@ -71,5 +71,9 @@
     "bin/*",
     "lib/*",
     "config/*"
-  ]
+  ],
+  "directories": {
+    "bin": "./bin",
+    "lib": "./lib"
+  }
 }

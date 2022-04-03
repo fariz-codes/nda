@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const packageJson = require('./../package.json');
+const packageJson = require('./package.json');
 const commands = ['run', 'sleep', 'status', 'respawn'];
 const optionsLength = {
   run: 4,
@@ -45,7 +45,7 @@ console.log('                          ---------------------------------- ');
 console.log(`                         | Node Deployment Assistant v${packageJson.version} |`);
 console.log('                          ---------------------------------- ');
 if (isValidCommand() && isValidOption()) {
-  require('../lib/helpers/process-command');
+  require('./lib/helpers/process-command');
 } else {
   console.log('Usage: nda <command> [option]\n');
   console.log('nda run                         starts nda in default port 8055\n');
