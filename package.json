@@ -1,6 +1,6 @@
 {
   "name": "nda-installer",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "An application to deploy NodeJS projects from an internet browser",
   "main": "index.js",
   "bin": {
