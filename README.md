@@ -12,9 +12,9 @@ Install **NDA** as a global package.
 npm i nda-installer -g
 ```
 
-## Supported platforms
+## Tested Operating Systems
 
-- Windows, Linux, Mac
+- Windows 11, Mac Monterey, RHEL 7.9, Ubuntu 20.04, Cent OS 7, Fedora 35
 
 ## Prerequisite
 
