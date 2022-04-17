@@ -6,7 +6,7 @@ const fs = require('fs');
 const projectConfig = require('../config/project-configs');
 const utils = require('../lib/helpers/utilities');
 const CONFIG_PATH = projectConfig.CHILD_PROCESS_BASE_CONFIG_PATH;
-const { _restartRunningPids } = require('../lib/models/process');
+const { _restartRunningPids, _startProjectsOnBoot } = require('../lib/models/process');
 
 const port = process.env.port;
 const appURL = `http://localhost:${port}`;
@@ -14,9 +14,11 @@ const startScriptPath = path.resolve(CONFIG_PATH, 'start-script.vbs');
 const vbsPath = path.resolve(CONFIG_PATH, 'executer.vbs');
 
 const sendCLIResponse = () => {
-  fs.writeFileSync(vbsPath, `CreateObject("WScript.Shell").Run "${appURL}"`);
-  console.log(`Open ${appURL} in your browser to explore nda.`);
-  exec(vbsPath, {});
+  _startProjectsOnBoot(() => {
+    fs.writeFileSync(vbsPath, `CreateObject("WScript.Shell").Run "${appURL}"`);
+    console.log(`Open ${appURL} in your browser to explore nda.`);
+    exec(vbsPath, {});
+  });
 };
 
 utils.isPortInUse(port, async function (data) {
