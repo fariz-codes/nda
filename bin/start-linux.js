@@ -13,16 +13,14 @@ const port = process.env.port;
 const appURL = `http://localhost:${port}`;
 
 const sendCLIResponse = () => {
-  _startProjectsOnBoot(() => {
-    console.log(`Open ${appURL} in your browser to explore nda.`);
-    if (process.env.openInBrowser === 'true') {
-      let openCmd = 'open';
-      if (os.type().indexOf('Linux') > -1) {
-        openCmd = 'xdg-open';
-      }
-      spawn(openCmd, [appURL], {});
+  console.log(`Open ${appURL} in your browser to explore nda.`);
+  if (process.env.openInBrowser === 'true') {
+    let openCmd = 'open';
+    if (os.type().indexOf('Linux') > -1) {
+      openCmd = 'xdg-open';
     }
-  });
+    spawn(openCmd, [appURL], {});
+  }
 };
 
 utils.isPortInUse(port, (data) => {
@@ -49,7 +47,9 @@ utils.isPortInUse(port, (data) => {
                 sendCLIResponse();
               });
             } else {
-              sendCLIResponse();
+              _startProjectsOnBoot(() => {
+                sendCLIResponse();
+              });
             }
           }
         });

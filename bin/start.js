@@ -14,13 +14,11 @@ const startScriptPath = path.resolve(CONFIG_PATH, 'start-script.vbs');
 const vbsPath = path.resolve(CONFIG_PATH, 'executer.vbs');
 
 const sendCLIResponse = () => {
-  _startProjectsOnBoot(() => {
-    console.log(`Open ${appURL} in your browser to explore nda.`);
-    if (process.env.openInBrowser === 'true') {
-      fs.writeFileSync(vbsPath, `CreateObject("WScript.Shell").Run "${appURL}"`);
-      exec(vbsPath, {});
-    }
-  });
+  console.log(`Open ${appURL} in your browser to explore nda.`);
+  if (process.env.openInBrowser === 'true') {
+    fs.writeFileSync(vbsPath, `CreateObject("WScript.Shell").Run "${appURL}"`);
+    exec(vbsPath, {});
+  }
 };
 
 utils.isPortInUse(port, async function (data) {
@@ -49,7 +47,9 @@ utils.isPortInUse(port, async function (data) {
                     sendCLIResponse();
                   });
                 } else {
-                  sendCLIResponse();
+                  _startProjectsOnBoot(() => {
+                    sendCLIResponse();
+                  });
                 }
               }
             });
