@@ -15,9 +15,11 @@ const vbsPath = path.resolve(CONFIG_PATH, 'executer.vbs');
 
 const sendCLIResponse = () => {
   _startProjectsOnBoot(() => {
-    fs.writeFileSync(vbsPath, `CreateObject("WScript.Shell").Run "${appURL}"`);
     console.log(`Open ${appURL} in your browser to explore nda.`);
-    exec(vbsPath, {});
+    if (process.env.openInBrowser === 'true') {
+      fs.writeFileSync(vbsPath, `CreateObject("WScript.Shell").Run "${appURL}"`);
+      exec(vbsPath, {});
+    }
   });
 };
 

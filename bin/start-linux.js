@@ -15,11 +15,13 @@ const appURL = `http://localhost:${port}`;
 const sendCLIResponse = () => {
   _startProjectsOnBoot(() => {
     console.log(`Open ${appURL} in your browser to explore nda.`);
-    let openCmd = 'open';
-    if (os.type().indexOf('Linux') > -1) {
-      openCmd = 'xdg-open';
+    if (process.env.openInBrowser === 'true') {
+      let openCmd = 'open';
+      if (os.type().indexOf('Linux') > -1) {
+        openCmd = 'xdg-open';
+      }
+      spawn(openCmd, [appURL], {});
     }
-    spawn(openCmd, [appURL], {});
   });
 };
 
