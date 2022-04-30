@@ -8,7 +8,7 @@ const utils = require('../lib/helpers/utilities');
 const CONFIG_PATH = projectConfig.CHILD_PROCESS_BASE_CONFIG_PATH;
 const { _restartRunningPids, _startProjectsOnBoot } = require('../lib/models/process');
 
-const port = process.env.port;
+const port = process.env.PORT || 8055;
 const appURL = `http://localhost:${port}`;
 const startScriptPath = path.resolve(CONFIG_PATH, 'start-script.vbs');
 const vbsPath = path.resolve(CONFIG_PATH, 'executer.vbs');
