@@ -37,7 +37,7 @@ const isValidOption = () => {
       }
       return false;
     default:
-      return false;
+      return true;
   }
 };
 
@@ -47,13 +47,13 @@ console.log('                          ---------------------------------- ');
 if (isValidCommand() && isValidOption()) {
   require('./lib/helpers/process-command');
 } else {
-  console.log('Usage: nda <command> [options]\n');
-  console.log('nda run          starts nda in default port 8055\n');
-  console.log('nda run port     starts nda in mentioned port\n');
-  console.log('nda sleep        stops nda & all the services started by it\n');
-  console.log('nda status       provides the current running status of nda\n');
-  console.log('nda respawn      restarts the nda & all the services started by it. If nda is already running in your machine, then this command must be used after installing a new version of nda to apply the changes in it.\n\n');
+  console.log('Usage: nda <command> [option]\n');
+  console.log('nda run                         starts nda in default port 8055\n');
+  console.log('nda run [port]                  starts nda in mentioned port\n');
+  console.log('nda sleep                       stops nda & all the services started by it\n');
+  console.log('nda status                      provides the current running status of nda\n');
+  console.log('nda respawn                     restarts the nda & all the services started by it. If nda is already running in your machine, then this command must be used after installing a new version of nda to apply the changes in it.\n\n');
   console.log('Examples: \n');
-  console.log('nda run 7000     starts nda in 7000 port');
+  console.log('nda run 7000                    starts nda in 7000 port\n');
 }
 

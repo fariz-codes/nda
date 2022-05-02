@@ -12,9 +12,9 @@ Install **NDA** as a global package.
 npm i nda-installer -g
 ```
 
-## Supported platforms
+## Tested Operating Systems
 
-- Windows, Linux, Mac
+- Windows 11, Mac Monterey, RHEL 7.9, Ubuntu 20.04, Cent OS 7, Fedora 35
 
 ## Prerequisite
 
@@ -35,6 +35,8 @@ npm i nda-installer -g
 - Since the projects will be started in a **keep alive** mode, closing the browser window or the terminal (from where the NDA is launched) won't stop your NodeJs projects started by NDA.
 
 **Note** If the machine is restarted or NDA is stopped, it will stop all the projects started by the NDA.
+
+:pushpin: Configuration option to run NDA on system boot is added in version 0.3.0
 
 ## How it works
 
@@ -61,6 +63,20 @@ It has the functionality to,
 
 - Monitor the status of running projects & provide alert if the project got crashed.
 - Update the CPU usage of the running projects periodically.
+
+## Feature: Configuration
+
+This page will have the configuration options available for the NDA application.
+
+### Start-on-boot
+
+If this is enabled, NDA application will be started during the system startup
+
+### Launch-on-boot
+
+This will be available, only if the `Start-on-boot` option is enabled.
+
+Once this option is enabled, NDA application will be opened in the default internet browser during the system startup.
 
 ## Feature: Add Project
 

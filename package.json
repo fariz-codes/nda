@@ -19,12 +19,15 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "line-reader": "^0.4.0",
+    "n-bootstart": "^0.5.2",
     "pidusage": "^3.0.0",
     "tree-kill": "^1.2.2"
   },
   "keywords": [
     "application",
     "browser",
+    "boot start",
+    "boot-start",
     "cli",
     "cron",
     "deploy",
@@ -49,6 +52,8 @@
     "process run",
     "project",
     "project deployment",
+    "start on boot",
+    "start-on-boot",
     "Windows"
   ],
   "maintainers": [
