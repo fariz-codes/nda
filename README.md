@@ -66,7 +66,7 @@ It has the functionality to,
 
 ## Feature: Configuration
 
-This page will have the configuration option available for the NDA application.
+This page will have the configuration options available for the NDA application.
 
 ### Start-on-boot
 
@@ -74,7 +74,7 @@ If this is enabled, NDA application will be started during the system startup
 
 ### Launch-on-boot
 
-This will be available, only if the `Start-on-boot` is enabled.
+This will be available, only if the `Start-on-boot` option is enabled.
 
 Once this option is enabled, NDA application will be opened in the default internet browser during the system startup.
 
