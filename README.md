@@ -76,7 +76,7 @@ If this is enabled, NDA application will be started during the system startup
 
 This will be available, only if the `Start-on-boot` is enabled.
 
-Once this option is enabled, NDA application will be opened in the default browser during the system startup
+Once this option is enabled, NDA application will be opened in the default internet browser during the system startup.
 
 ## Feature: Add Project
 
