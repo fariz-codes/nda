@@ -1,10 +1,14 @@
+## 0.4.0
+
+- Add functionality to launch NDA on system boot
+- Add Start on boot option in the Add project page
+- Add functionality to run boot start enabled projects when NDA is launched
+- Update Readme file content
+
 ## 0.3.0
 
 - Add Configuration option in the Dashboard page
 - Add functionality to start NDA on system boot
-- Add functionality to launch NDA on system boot
-- Add Start on boot option in the Add project page
-- Update Readme file content
 
 ## 0.2.7
 
