@@ -26,6 +26,8 @@
   "keywords": [
     "application",
     "browser",
+    "boot start",
+    "boot-start",
     "cli",
     "cron",
     "deploy",
@@ -50,6 +52,8 @@
     "process run",
     "project",
     "project deployment",
+    "start on boot",
+    "start-on-boot",
     "Windows"
   ],
   "maintainers": [

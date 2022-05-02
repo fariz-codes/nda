@@ -36,6 +36,8 @@ npm i nda-installer -g
 
 **Note** If the machine is restarted or NDA is stopped, it will stop all the projects started by the NDA.
 
+:pushpin: Configuration option to run NDA on system boot is added in version 0.3.0
+
 ## How it works
 
 - When you start **NDA**, it will launch a web application in the machine where it's installed.
@@ -61,6 +63,20 @@ It has the functionality to,
 
 - Monitor the status of running projects & provide alert if the project got crashed.
 - Update the CPU usage of the running projects periodically.
+
+## Feature: Configuration
+
+This page will have the configuration option available for the NDA application.
+
+### Start-on-boot
+
+If this is enabled, NDA application will be started during the system startup
+
+### Launch-on-boot
+
+This will be available, only if the `Start-on-boot` is enabled.
+
+Once this option is enabled, NDA application will be opened in the default browser during the system startup
 
 ## Feature: Add Project
 
