@@ -26,7 +26,7 @@ npm i nda-installer -g
 
 ## About
 
-<img src="https://github.com/fariz-codes/npm-images/blob/master/nda/dashboard.png?raw=true" alt="Dashboard page">
+<img src="https://github.com/fariz-codes/npm-images/blob/master/nda/dashboard-legends.png?raw=true" alt="Dashboard page">
 
 **NDA** helps you to deploy your NodeJS projects in an easier way. Once you configure your project with NDA, then you are only one click away from starting or restarting it.
 
