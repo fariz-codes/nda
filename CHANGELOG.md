@@ -1,3 +1,7 @@
+## 0.4.2
+
+- Bugfixes in project start to ignore failed project starts
+
 ## 0.4.0
 
 - Add functionality to launch NDA on system boot
