@@ -1,3 +1,7 @@
+## 0.4.3
+
+- Update project crash message to display all the crashed projects
+
 ## 0.4.2
 
 - Bugfixes in project start to ignore failed project starts
