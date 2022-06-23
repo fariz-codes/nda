@@ -90,11 +90,11 @@ To start deploying your NodeJS projects, goto to the Add Project page by clickin
 
 NDA stores the logs of running projects in a daily basis. To see all the logs available for a project, click the **Logs** icon under the **Actions** column against the corresponding project in the dashboard. It will navigate you to the logs list page.
 
-- The **logs list page** displays the list of logs created on a daily basis.
+- The **logs list page** displays the list of log files created on a daily basis.
 
-- It provides the log information like log date, file size & updated time.
+- It provides the information like date, size & last modified time of the log files.
 
-- It also provides the options to delete & view the logs of a particular day.
+- It also provides the options to delete or view the logs of a particular day.
 
 - To view the logs, click on the **Logs** icon against the log file. It will navigate you to the logs page.
 

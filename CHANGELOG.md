@@ -1,3 +1,9 @@
+## 0.5.0
+
+- Add functionality to select & delete a list of log files
+- Update content of logs list in Readme file
+- UI Changes in logs list page
+
 ## 0.4.3
 
 - Update project crash message to display all the crashed projects
