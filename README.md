@@ -141,10 +141,10 @@ nda respawn
 
 ## Receiving Updates
 
-- To install the latest version
+- To get the latest version
 
 ```
-npm i nda-installer -g
+npm update nda-installer -g
 ```
 
 - To apply the latest changes
