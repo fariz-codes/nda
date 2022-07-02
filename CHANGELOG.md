@@ -1,3 +1,9 @@
+## 0.5.1
+
+- Bugfixes in config module
+- Update Prerequisite block in Readme file
+- Updates in Package json file
+
 ## 0.5.0
 
 - Add functionality to select & delete a list of log files
