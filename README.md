@@ -18,11 +18,11 @@ npm i nda-installer -g
 
 ## Prerequisite
 
-- As NDA is a browser application, an internet browser is required to be installed in your machine. 
+Please complete the following prerequisite before installing the NDA
 
-**Note** If you are using a linux-OS based machine and you cant install a browser in it, then you can run NDA in your machine on some port & do Port Tunneling (Port Forwarding) to other remote machine where you can access the NDA app in browser.
+- Install an internet browser.
 
-- As NDA uses ES6 scripts, it is required that your machine should be installed with **NodeJS** version greater than or equal to **4.3.2**.
+- Install NodeJS version >= **7.10.1**.
 
 ## About
 
