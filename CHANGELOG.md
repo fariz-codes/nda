@@ -1,3 +1,8 @@
+## 0.6.0
+
+- Include **Clone** option in the dashboard to create a project's copy in the project list
+- Update Readme file
+
 ## 0.5.1
 
 - Bugfixes in config module

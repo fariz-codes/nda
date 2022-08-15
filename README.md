@@ -36,7 +36,7 @@ Please complete the following prerequisite before installing the NDA
 
 **Note** If the machine is restarted or NDA is stopped, it will stop all the projects started by the NDA.
 
-:pushpin: Configuration option to run NDA on system boot is added in version 0.3.0
+:pushpin: **Start-on-boot** option is added in version 0.3.0. It will help to run NDA on the system boot.
 
 ## How it works
 
@@ -56,6 +56,7 @@ It provides the options to,
 
 - Edit, Delete, Run, Stop & Restart the projects.
 - Add a project.
+- Clone a project.
 - See the project logs.
 - Stop all projects (when more than one projects are running).
 
