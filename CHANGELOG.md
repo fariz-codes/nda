@@ -1,4 +1,4 @@
-## 0.6.0
+## 0.6.1
 
 - Functionality changes in logs list & logs content pages
 - Bugfix in logs content page
