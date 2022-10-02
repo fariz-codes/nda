@@ -97,7 +97,7 @@ NDA stores the logs of running projects in a daily basis. To see all the logs av
 
 - It also provides the options to delete or view the logs of a particular day.
 
-- To view the logs, click on the date against each log file. It will navigate you to the logs page.
+- To view the logs, click on the **date** against each log file. It will navigate you to the logs page.
 
 - **Logs page** displays the log contents based on the date.
 
