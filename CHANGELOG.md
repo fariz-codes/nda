@@ -1,5 +1,10 @@
 ## 0.6.0
 
+- Functionality changes in logs list & logs content pages
+- Bugfix in logs content page
+
+## 0.6.0
+
 - Include **Clone** option in the dashboard to create a project's copy in the project list
 - Update Readme file
 
