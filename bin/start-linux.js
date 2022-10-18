@@ -8,6 +8,7 @@ const projectConfig = require('../config/project-configs');
 const utils = require('../lib/helpers/utilities');
 const CONFIG_PATH = projectConfig.CHILD_PROCESS_BASE_CONFIG_PATH;
 const { _restartRunningPids, _startProjectsOnBoot } = require('../lib/models/process');
+const { PROJECT } = require('../lib/helpers/constant-texts');
 
 const port = process.env.PORT || 8055;
 const appURL = `http://localhost:${port}`;
@@ -36,27 +37,35 @@ utils.isPortInUse(port, (data) => {
     } else {
       let serverPath = path.resolve(__dirname, 'server.js');
       const spawnResponse = spawn(process.execPath, [serverPath], { detached: true, env: { PORT: port } });
-      let startInterval = setInterval(function () {
-        utils.isPortInUse(port, (data) => {
-          if (data && (data.inUse || data.ignore)) {
-            clearInterval(startInterval);
-            let runningPids = fs.existsSync(path.resolve(CONFIG_PATH, 'runningPids.txt')) ? fs.readFileSync(path.resolve(CONFIG_PATH, 'runningPids.txt')).toString() : null;
-            runningPids = runningPids ? runningPids.split(',') : [];
-            if (runningPids && runningPids.length > 0) {
-              _restartRunningPids(runningPids, () => {
-                sendCLIResponse();
-              });
-            } else {
-              _startProjectsOnBoot(() => {
-                sendCLIResponse();
-              });
+
+      spawnResponse.stdout.on('data', (data) => {
+        let serverMsg = utils.convertBufferToArray(data);
+        if (serverMsg && serverMsg.indexOf('SSL error') > -1) {
+          console.log(PROJECT.Error.SSL_FILES_ERR);
+        }
+        let startInterval = setInterval(function () {
+          utils.isPortInUse(port, (data) => {
+            if (data && (data.inUse || data.ignore)) {
+              clearInterval(startInterval);
+              let runningPids = fs.existsSync(path.resolve(CONFIG_PATH, 'runningPids.txt')) ? fs.readFileSync(path.resolve(CONFIG_PATH, 'runningPids.txt')).toString() : null;
+              runningPids = runningPids ? runningPids.split(',') : [];
+              if (runningPids && runningPids.length > 0) {
+                _restartRunningPids(runningPids, () => {
+                  sendCLIResponse();
+                });
+              } else {
+                _startProjectsOnBoot(() => {
+                  sendCLIResponse();
+                });
+              }
             }
-          }
-        });
-      }, 2000);
+          });
+        }, 2000);
+      });
 
       spawnResponse.on('error', (data) => {
-        console.log(`Failed to start nda on port ${port}. Please ensure the port that you are trying is not in use & run again.`);
+        let errMsg = utils.convertBufferToArray(data);
+        console.log(errMsg)
       });
     }
   }
