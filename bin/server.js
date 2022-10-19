@@ -13,10 +13,12 @@ const { writeLog } = require('../lib/helpers/log-writer');
 const fs = require('fs');
 const projectConfig = require('../config/project-configs');
 const CONFIG_PATH = projectConfig.CHILD_PROCESS_BASE_CONFIG_PATH;
-const { getSSLConfig } = require('../lib/helpers/nda-config');
-const sslConfig = getSSLConfig();
+const { getSSLConfig, mapSSLConfig } = require('../lib/helpers/nda-config');
 let server;
 let sslErr;
+let sslConfig = getSSLConfig();
+if (!sslConfig) sslConfig = {};
+sslConfig.sslEnabled = false;
 
 const app = express();
 
@@ -63,6 +65,7 @@ if (sslConfig && sslConfig.sslKey && sslConfig.sslCert) {
         key: fs.readFileSync(sslKeyPath),
         cert: fs.readFileSync(sslCertPath)
       }, app);
+      sslConfig.sslEnabled = true;
     } catch (err) {
       sslErr = err ? err.toString() : err;
     }
@@ -87,6 +90,7 @@ try {
     fs.writeFileSync(path.resolve(CONFIG_PATH, 'port.txt'), port.toString())
     let startMsg = `NDA successfully started on port ${port}`;
     if (sslErr) startMsg += ' with SSL error';
+    mapSSLConfig(sslConfig);
     console.log(startMsg);
   });
 } catch (err) {
