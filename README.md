@@ -34,15 +34,11 @@ Please complete the following prerequisite before installing the NDA
 
 - Since the projects will be started in a **keep alive** mode, closing the browser window or the terminal (from where the NDA is launched) won't stop your NodeJs projects started by NDA.
 
-**Note** If the machine is restarted or NDA is stopped, all the projects started by the NDA will be stopped.
-
-:pushpin: **Start-on-boot** option is added in version 0.3.0. It will help to run NDA on the system boot.
-
 ## How it works
 
-- When you start **NDA**, it will launch a web application in the machine where it's installed.
+- When you start **NDA**, it will run a web application in the machine where it's installed.
 
-- From the launched web app, you can handle the deployment of your NodeJS projects.
+- By accessing that web application, you can handle the deployments of your NodeJS projects.
 
 ## Demo
 
