@@ -79,6 +79,12 @@ This will be available, only if the `Start-on-boot` option is enabled.
 
 Once this option is enabled, NDA application will be opened in the default internet browser during the system startup.
 
+### Bind SSL Certificate
+
+Using this option, a SSL certificate can be added to the NDA application.
+
+Once enabled, NDA will be launched with https protocol.
+
 ## Feature: Add Project
 
 To start deploying your NodeJS projects, goto to the Add Project page by clicking on the (+) button in the dashboard.

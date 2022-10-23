@@ -1,3 +1,12 @@
+## 0.7.0
+
+- Add options in configuration page to map ssl related files
+- Add functionality in start script to start the app with ssl
+- Handle protocol settings in views based on the ssl binding
+- Handle ssl based errors in app start script
+- Update UI in configuration page
+- Update README.md and package.json files
+
 ## 0.6.2
 
 - Update dashboard images
