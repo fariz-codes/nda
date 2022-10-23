@@ -50,15 +50,14 @@ This is the launching page of the NDA.
 
 It provides the options to,
 
-- Edit, Delete, Run, Stop & Restart the projects.
-- Add a project.
-- Clone a project.
+- Add / Edit / Delete / Clone a project.
+- Run / Stop / Restart a project.
 - See the project logs.
 - Stop all projects (when more than one projects are running).
 
 It has the functionality to,
 
-- Monitor the status of running projects & provide alert if the project got crashed.
+- Monitor status of the projects started by NDA & display a popup if a running project is crashed.
 - Update the CPU usage of the running projects periodically.
 
 ## Feature: Configuration
