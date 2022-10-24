@@ -8,10 +8,17 @@
 const express = require('express');
 const path = require('path');
 const http = require('http');
+const https = require('https');
 const { writeLog } = require('../lib/helpers/log-writer');
 const fs = require('fs');
 const projectConfig = require('../config/project-configs');
 const CONFIG_PATH = projectConfig.CHILD_PROCESS_BASE_CONFIG_PATH;
+const { getSSLConfig, mapSSLConfig } = require('../lib/helpers/nda-config');
+let server;
+let sslErr;
+let sslConfig = getSSLConfig();
+if (!sslConfig) sslConfig = {};
+sslConfig.sslEnabled = false;
 
 const app = express();
 
@@ -47,16 +54,48 @@ app.use('/', function (req, res, next) {
 
 }, require('../lib/routes/index'));
 
-let server = http.createServer(app);
-
-// Start the application
-server.listen(port, () => {
-  process.setMaxListeners(0);
-  if (!process.env.PORT) {
-    process.env.PORT = port;
+if (sslConfig && sslConfig.sslKey && sslConfig.sslCert) {
+  let sslKeyPath = path.resolve(sslConfig.sslKey);
+  let sslCertPath = path.resolve(sslConfig.sslCert)
+  let sslKeyExists = fs.existsSync(sslKeyPath);
+  let sslCertExists = fs.existsSync(sslCertPath);
+  if (sslKeyExists && sslCertExists) {
+    try {
+      server = https.createServer({
+        key: fs.readFileSync(sslKeyPath),
+        cert: fs.readFileSync(sslCertPath)
+      }, app);
+      sslConfig.sslEnabled = true;
+    } catch (err) {
+      sslErr = err ? err.toString() : err;
+    }
   }
-  fs.writeFileSync(path.resolve(CONFIG_PATH, 'pid.txt'), process.pid.toString())
-  fs.writeFileSync(path.resolve(CONFIG_PATH, 'port.txt'), port.toString())
-});
+} else {
+  server = http.createServer(app);
+}
 
+// Start the application if no ssl error
+if (sslErr) {
+  writeLog(null, 500, sslErr, '_2');
+  server = http.createServer(app);
+}
+
+try {
+  server.listen(port, () => {
+    process.setMaxListeners(0);
+    if (!process.env.PORT) {
+      process.env.PORT = port;
+    }
+    fs.writeFileSync(path.resolve(CONFIG_PATH, 'pid.txt'), process.pid.toString())
+    fs.writeFileSync(path.resolve(CONFIG_PATH, 'port.txt'), port.toString())
+    let startMsg = `NDA successfully started on port ${port}`;
+    if (sslErr) startMsg += ' with SSL error';
+    mapSSLConfig(sslConfig);
+    console.log(startMsg);
+  });
+} catch (err) {
+  const errMsg = `Failed to start server on port ${port} due to error: \n${err ? err.toString() : err}`;
+  writeLog(null, 500, errMsg, '_2');
+  throw new Error(errMsg);
+}
 module.exports = { app };

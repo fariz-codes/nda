@@ -34,15 +34,11 @@ Please complete the following prerequisite before installing the NDA
 
 - Since the projects will be started in a **keep alive** mode, closing the browser window or the terminal (from where the NDA is launched) won't stop your NodeJs projects started by NDA.
 
-**Note** If the machine is restarted or NDA is stopped, all the projects started by the NDA will be stopped.
-
-:pushpin: **Start-on-boot** option is added in version 0.3.0. It will help to run NDA on the system boot.
-
 ## How it works
 
-- When you start **NDA**, it will launch a web application in the machine where it's installed.
+- When you start **NDA**, it will run a web application in the machine where it's installed.
 
-- From the launched web app, you can handle the deployment of your NodeJS projects.
+- By accessing that web application, you can handle the deployments of your NodeJS projects.
 
 ## Demo
 
@@ -54,15 +50,14 @@ This is the launching page of the NDA.
 
 It provides the options to,
 
-- Edit, Delete, Run, Stop & Restart the projects.
-- Add a project.
-- Clone a project.
+- Add / Edit / Delete / Clone a project.
+- Run / Stop / Restart a project.
 - See the project logs.
 - Stop all projects (when more than one projects are running).
 
 It has the functionality to,
 
-- Monitor the status of running projects & provide alert if the project got crashed.
+- Monitor status of the projects started by NDA & display a popup if a running project is crashed.
 - Update the CPU usage of the running projects periodically.
 
 ## Feature: Configuration
@@ -78,6 +73,12 @@ If this is enabled, NDA application will be started during the system startup
 This will be available, only if the `Start-on-boot` option is enabled.
 
 Once this option is enabled, NDA application will be opened in the default internet browser during the system startup.
+
+### Bind SSL Certificate
+
+Using this option, a SSL certificate can be added to the NDA application.
+
+Once enabled, NDA will be launched with https protocol.
 
 ## Feature: Add Project
 

@@ -36,6 +36,9 @@
     "forever",
     "forever-monitor",
     "handler",
+    "handler",
+    "http",
+    "https",
     "keep alive",
     "keep process alive",
     "Linux",
@@ -52,6 +55,7 @@
     "process run",
     "project",
     "project deployment",
+    "SSL",
     "start on boot",
     "start-on-boot",
     "Windows"
