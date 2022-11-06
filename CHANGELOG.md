@@ -1,3 +1,7 @@
+## 1.0.0
+
+- Add option to enable authentication
+
 ## 0.7.0
 
 - Add options in configuration page to map ssl related files
