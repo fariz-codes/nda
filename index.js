@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 
 const packageJson = require('./package.json');
-const commands = ['run', 'sleep', 'status', 'respawn'];
+const commands = ['run', 'sleep', 'status', 'respawn', 'setup-auth'];
 const optionsLength = {
   run: 4,
   sleep: 3,
   status: 3,
-  respawn: 3
+  respawn: 3,
+  'setup-auth': 4
 };
 const optionType = {
   run: 'number'
@@ -48,12 +49,17 @@ if (isValidCommand() && isValidOption()) {
   require('./lib/helpers/process-command');
 } else {
   console.log('Usage: nda <command> [option]\n');
+  console.log('------\n');
+  console.log('nda setup-auth [password]       generates qr code image that can be used in the authenticator app. Please remember the password as it has to be provided during the login process.\n')
+  console.log('                                **IMPORTANT**: To reset the password, please re-run the `setup-auth` and configure the newly generated qr code in your authenticator app\n')
   console.log('nda run                         starts nda in default port 8055\n');
   console.log('nda run [port]                  starts nda in mentioned port\n');
   console.log('nda sleep                       stops nda & all the services started by it\n');
   console.log('nda status                      provides the current running status of nda\n');
   console.log('nda respawn                     restarts the nda & all the services started by it. If nda is already running in your machine, then this command must be used after installing a new version of nda to apply the changes in it.\n\n');
   console.log('Examples: \n');
+  console.log('---------\n');
   console.log('nda run 7000                    starts nda in 7000 port\n');
+  console.log('nda setup-auth sUper@dm1n       generates qr code image using the provided password\n');
 }
 

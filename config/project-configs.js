@@ -7,10 +7,14 @@
 
 const path = require('path');
 const homeDir = require('os').homedir();
+const authUserName = 'Admin';
+const authAppName = 'NDA';
 
 module.exports = {
   NDA_BASE_PATH: path.resolve(homeDir, '.nda'),
   PROJECTS_CONFIG_PATH: path.resolve(homeDir, '.nda/config/projects.json'),
   CHILD_PROCESS_BASE_CONFIG_PATH: path.resolve(homeDir, '.nda/config'),
-  CHILD_PROCESS_LOG_PATH: path.resolve(homeDir, '.nda/logs')
+  CHILD_PROCESS_LOG_PATH: path.resolve(homeDir, '.nda/logs'),
+  AUTH_QR_CODE_IMG_PATH: path.resolve(homeDir, '.nda/config/nda_auth_otp.png'),
+  authAppName, authUserName
 };
