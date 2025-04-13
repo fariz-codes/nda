@@ -17,6 +17,5 @@ module.exports = {
   PROJECTS_CONFIG_PATH: path.resolve(homeDir, '.nda/config/projects.json'),
   CHILD_PROCESS_BASE_CONFIG_PATH: path.resolve(homeDir, '.nda/config'),
   CHILD_PROCESS_LOG_PATH: path.resolve(homeDir, '.nda/logs'),
-  AUTH_QR_CODE_IMG_PATH: path.resolve(homeDir, '.nda/config/'),
   authAppName, authUserName, authSecret, authQrCodeFile
 };
